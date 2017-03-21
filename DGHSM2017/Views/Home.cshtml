@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+<div class="outerWrapper">
+	<div class="innerWrapper">
+		<div class="imageWrapper"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(@Umbraco.Field("logo").ToString()).Url&width=650&constrain=false&crop=resize&compression=75" alt="" /></div>
+	</div>
+</div>

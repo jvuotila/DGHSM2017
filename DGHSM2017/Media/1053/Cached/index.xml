@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_f>
+    <image>
+      <originalFileName>frisbeegolf-hyvinkaa-2017-logo.png</originalFileName>
+      <size>71443</size>
+      <dateLastModified>Tue, 21 Mar 2017 17:38:03 GMT</dateLastModified>
+      <width>1178</width>
+      <height>890</height>
+      <cachedImage>
+        <fileName>FRI_4c12852974cced9d184da2cbcef6014e120854bc8d8fe6ba77cf8f585ffff335.png</fileName>
+        <dateCreated>Tue, 21 Mar 2017 17:41:03 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>650</width>
+        <height>491</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+    </image>
+  </_f>
+</imageIndex>
