@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "55d2c2bb9bfad559")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.7")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "3b2e0ec73e5e6d96")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -103,12 +103,30 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Background Image
+		/// Background Image 1
 		///</summary>
-		[ImplementPropertyType("backgroundImage")]
-		public string BackgroundImage
+		[ImplementPropertyType("backgroundImage1")]
+		public string BackgroundImage1
 		{
-			get { return this.GetPropertyValue<string>("backgroundImage"); }
+			get { return this.GetPropertyValue<string>("backgroundImage1"); }
+		}
+
+		///<summary>
+		/// Background Image 2
+		///</summary>
+		[ImplementPropertyType("backgroundImage2")]
+		public string BackgroundImage2
+		{
+			get { return this.GetPropertyValue<string>("backgroundImage2"); }
+		}
+
+		///<summary>
+		/// Background Image 3
+		///</summary>
+		[ImplementPropertyType("backgroundImage3")]
+		public string BackgroundImage3
+		{
+			get { return this.GetPropertyValue<string>("backgroundImage3"); }
 		}
 
 		///<summary>
@@ -139,12 +157,30 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Navigation Logo
+		///</summary>
+		[ImplementPropertyType("navigationLogo")]
+		public string NavigationLogo
+		{
+			get { return this.GetPropertyValue<string>("navigationLogo"); }
+		}
+
+		///<summary>
 		/// News: Select content node where to list news articles to home page
 		///</summary>
 		[ImplementPropertyType("news")]
 		public object News
 		{
 			get { return this.GetPropertyValue("news"); }
+		}
+
+		///<summary>
+		/// Signup Page
+		///</summary>
+		[ImplementPropertyType("signupPage")]
+		public object SignupPage
+		{
+			get { return this.GetPropertyValue("signupPage"); }
 		}
 	}
 
@@ -408,6 +444,15 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
 		}
+
+		///<summary>
+		/// Lead Text: Shown on homepage listing
+		///</summary>
+		[ImplementPropertyType("leadText")]
+		public string LeadText
+		{
+			get { return this.GetPropertyValue<string>("leadText"); }
+		}
 	}
 
 	/// <summary>Organization Person</summary>
@@ -501,9 +546,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Partner Intro: Short introduction of parner
 		///</summary>
 		[ImplementPropertyType("partnerIntro")]
-		public string PartnerIntro
+		public IHtmlString PartnerIntro
 		{
-			get { return this.GetPropertyValue<string>("partnerIntro"); }
+			get { return this.GetPropertyValue<IHtmlString>("partnerIntro"); }
 		}
 
 		///<summary>

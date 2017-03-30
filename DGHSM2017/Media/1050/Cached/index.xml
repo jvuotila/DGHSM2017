@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_f>
+    <image>
+      <originalFileName>frisbeegolf-hyvinkaa-2017-ei-merkkia-mustavalkoinen.png</originalFileName>
+      <size>47014</size>
+      <dateLastModified>Tue, 21 Mar 2017 17:38:02 GMT</dateLastModified>
+      <width>1265</width>
+      <height>716</height>
+      <cachedImage>
+        <fileName>FRI_075e9ef0fdaea867a4029e9f45cae6f0d1c9643aafeeead38015e9780ad48764.png</fileName>
+        <dateCreated>Sun, 26 Mar 2017 15:44:17 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>80</width>
+        <height>45</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>FRI_06ecfe8b8e60760a760ddd784d0696a23e4c8ce5c7801a2c95d74752aa9a67de.png</fileName>
+        <dateCreated>Sun, 26 Mar 2017 19:32:56 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>115</width>
+        <height>65</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>FRI_cb40a8ecf43138e979e548b78cb862772a536d0806045c42a34713d71dfeae78.png</fileName>
+        <dateCreated>Sun, 26 Mar 2017 19:36:06 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>141</width>
+        <height>80</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>FRI_d1fc52c0554e243fbc43ad56293262618bb7b40f5f720a055a763d0a380b9392.png</fileName>
+        <dateCreated>Mon, 27 Mar 2017 19:09:20 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>124</width>
+        <height>70</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+    </image>
+  </_f>
+</imageIndex>

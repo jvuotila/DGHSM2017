@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_d>
+    <image>
+      <originalFileName>dsc_0249.jpg</originalFileName>
+      <size>6569113</size>
+      <dateLastModified>Sun, 26 Mar 2017 19:43:46 GMT</dateLastModified>
+      <width>6016</width>
+      <height>4000</height>
+      <cachedImage>
+        <fileName>DSC_353645e2945900c3d9f2e4d6e9bbf8734e3a16447d7a3d6fbd9137e43d40f062.jpeg</fileName>
+        <dateCreated>Sun, 26 Mar 2017 19:47:16 GMT</dateCreated>
+        <imageFormat>jpeg</imageFormat>
+        <compression>75</compression>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>1000</width>
+        <height>665</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>DSC_f6027dac53e1c96538f03ba678994cc9e710a7720c4bdd8ef9770e734dc275b8.jpeg</fileName>
+        <dateCreated>Sun, 26 Mar 2017 19:59:13 GMT</dateCreated>
+        <imageFormat>jpeg</imageFormat>
+        <compression>75</compression>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>1200</width>
+        <height>798</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+    </image>
+  </_d>
+</imageIndex>

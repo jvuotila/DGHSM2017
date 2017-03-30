@@ -1,61 +1,108 @@
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-@{ var home = CurrentPage.Site(); }
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var home = CurrentPage.Site();
+    var i = 1;
+    var j = 1;
+    var k = 1;
+}
 
 @if (home.Children.Any())
 {
     @* Get the first page in the children *@
     var naviLevel = home.Children.First().Level;
-    
-    @* Add in level for a CSS hook *@
-    <ul class="level-@naviLevel">            
-        @* For each child page under the home node *@
-        @foreach (var childPage in home.Children)
-        {   
-            if (childPage.Children.Any())
-            {                    
-                <li class="has-child @(childPage.IsAncestorOrSelf(CurrentPage) ? "selected" : null)">
-					@if(childPage.DocumentTypeAlias == "LandingPage") 
-					{
-                    	<span>@childPage.Name</span>
-						@childPages(childPage.Children)
-					} else {
-						<a href="@childPage.Url">@childPage.Name</a>
-					}
-                </li>
-            } 
-			else
-            {
-                <li class="@(childPage.IsAncestorOrSelf(CurrentPage) ? "selected" : null)">
-                    <a href="@childPage.Url">@childPage.Name</a>
-                </li>
-            }            
-        }
-    </ul>
-}
 
-@helper childPages(dynamic pages)
-{
-    @* Ensure that we have a collection of pages *@
-    if (pages.Any())
+    @* Add in level for a CSS hook *@
+
+    foreach (var childPage in home.Children.Where("Visible"))
     {
-        @* Get the first page in pages and get the level *@
-        var naviLevel = pages.First().Level;
-        
-        @* Add in level for a CSS hook *@
-        <ul class="sublevel level-@(naviLevel)">
-            @foreach (var page in pages)
+        if (childPage.Children.Any())
+        {
+            <ul id="dropdown@(i)" class="dropdown-content">
+                @childPages(childPage.Children)
+            </ul>
+        }
+        i++;
+    }
+
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+        @* For each child page under the home node *@
+        @foreach (var childPage in home.Children.Where("Visible"))
+        {
+            if (childPage.Children.Any())
             {
                 <li>
-                    <a href="@page.Url">@page.Name</a>
-                    
-                    @* if the current page has any children *@
-                    @if (page.Children.Any())
-                    {                        
-                        @* Call our helper to display the children *@
-                        @childPages(page.Children)
-                    }
+                    <a href="#!" data-activates="dropdown@(j)" data-beloworigin="true" class="dropdown-button">@childPage.Name<i class="material-icons right">arrow_drop_down</i></a>
                 </li>
             }
-        </ul>
+            else
+            {
+                <li><a href="@childPage.Url">@childPage.Name</a></li>
+            }
+            j++;
+        }
+    </ul>
+    <ul id="nav-mobile" class="side-nav">
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+            @if (home.Children.Any())
+            {
+                @* Get the first page in the children *@
+                naviLevel = home.Children.First().Level;
+            
+                
+                    @* For each child page under the home node *@
+                    foreach (var childPage in home.Children.Where("Visible"))
+                    {
+                        if (childPage.Children.Any())
+                        {
+                            <li class="bold">
+                                <a class="collapsible-header waves-effect waves-teal">@childPage.Name</a>
+                                @mobileChildPages(childPage.Children)
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="bold"><a href="@childPage.Url" class="waves-effect waves-teal">@childPage.Name</a></li>
+                        }
+                    }
+            }
+            </ul>
+        </li>
+    </ul>
+    }
+
+    @helper childPages(dynamic pages)
+    {
+        @* Ensure that we have a collection of pages *@
+        if (pages.Any())
+        {
+            @* Get the first page in pages and get the level *@
+            var naviLevel = pages.First().Level;
+    
+            foreach (var page in pages)
+            {
+                <li><a href="@page.Url" class="indigo-text darken-4">@page.Name</a></li>
+            }
+        }
+    }
+
+    @helper mobileChildPages(dynamic pages)
+    {
+        @* Ensure that we have a collection of pages *@
+        if (pages.Any())
+        {
+            @* Get the first page in pages and get the level *@
+            var naviLevel = pages.First().Level;
+    
+            <div class="collapsible-body" style="">
+                <ul>
+                    @foreach (var page in pages)
+                    {
+                        <li><a href="@page.Url">@page.Name</a></li>
+                    }
+                </ul>
+            </div>
+        }
     }
 }

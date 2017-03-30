@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_f>
+    <image>
+      <originalFileName>frisbeegolf-hyvinkaa-2017-logo-glow.png</originalFileName>
+      <size>192607</size>
+      <dateLastModified>Mon, 27 Mar 2017 18:08:46 GMT</dateLastModified>
+      <width>1300</width>
+      <height>1000</height>
+      <cachedImage>
+        <fileName>FRI_b39c9eb37657cd52450ce04b48da5080a4ec8b974fab87e0258a01efda79f3de.png</fileName>
+        <dateCreated>Mon, 27 Mar 2017 18:09:05 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>585</width>
+        <height>450</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>FRI_7c509dc0035a17ca62287dd25dc7cfb79407af68a85f30e7507fe627913b15cd.png</fileName>
+        <dateCreated>Mon, 27 Mar 2017 18:10:33 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>611</width>
+        <height>470</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+    </image>
+  </_f>
+</imageIndex>

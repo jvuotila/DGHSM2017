@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_l>
+    <image>
+      <originalFileName>logo.png</originalFileName>
+      <size>50981</size>
+      <dateLastModified>Thu, 30 Mar 2017 11:08:08 GMT</dateLastModified>
+      <width>600</width>
+      <height>350</height>
+      <cachedImage>
+        <fileName>LOG_3d2c82f0825128724c2cebf9982398431543fa5d937a7fd86050393ef215038f.png</fileName>
+        <dateCreated>Thu, 30 Mar 2017 11:40:58 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>120</width>
+        <height>70</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+    </image>
+  </_l>
+</imageIndex>

@@ -305,6 +305,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\materialize.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="css\styles.min.css">
+      <DependentUpon>styles.css</DependentUpon>
+    </Content>
+    <Content Include="js\init.js" />
     <Content Include="js\jquery-2.1.1.min.js" />
     <Content Include="js\materialize.min.js" />
     <Content Include="packages.config" />
@@ -577,6 +585,31 @@
     <Content Include="App_Data\TEMP\PluginCache\umbraco-plugins.JUHO.hash" />
     <Content Include="App_Data\TEMP\PluginCache\umbraco-plugins.JUHO.list" />
     <Content Include="App_Data\umbraco.config" />
+    <Content Include="css\styles.less" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="fonts\roboto\Roboto-Bold.eot" />
+    <Content Include="fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="fonts\roboto\Roboto-Light.eot" />
+    <Content Include="fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="fonts\roboto\Roboto-Light.woff" />
+    <Content Include="fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="fonts\roboto\Roboto-Medium.eot" />
+    <Content Include="fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="fonts\roboto\Roboto-Regular.eot" />
+    <Content Include="fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="fonts\roboto\Roboto-Thin.eot" />
+    <Content Include="fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="fonts\roboto\Roboto-Thin.woff2" />
     <None Include="Properties\PublishProfiles\dghsm2017 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\dghsm2017 - Web Deploy.pubxml">
       <SubType>Designer</SubType>
@@ -711,6 +744,9 @@
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\News.cshtml" />
     <Content Include="Views\Partners.cshtml" />
+    <Content Include="Views\MacroPartials\Navigation.cshtml" />
+    <Content Include="Views\Partials\BottomNavigation.cshtml" />
+    <Content Include="Views\Partials\MainNavigation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5995,7 +6031,9 @@
     <Content Include="Umbraco_Client\Ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
     <Content Include="Umbraco_Client\Ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Umbraco_Client\Ui\ui-lightness\jquery-ui.custom.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -6016,7 +6054,6 @@
     <Folder Include="App_Data\NuGetBackup\20170203-194157\Umbraco_Client\" />
     <Folder Include="App_Data\packages\created\" />
     <Folder Include="App_Data\TEMP\Install\" />
-    <Folder Include="fonts\roboto\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Release\Database\" />
     <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\Media\" />

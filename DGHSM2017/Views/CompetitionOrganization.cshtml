@@ -1,4 +1,69 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = null;
+    Layout = "Master.cshtml";
+    var home = Umbraco.TypedContentAtRoot().First();
+    Random rnd = new Random();
+    int OrganizationPersonsNodeId = int.Parse(Umbraco.Field("organizationPersons").ToString());
+    var i = 1;
+}
+
+<div class="parallax-container valign-wrapper" style="min-height: 300px;">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>@CurrentPage.Name</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(@Umbraco.Field(home, "backgroundImage" + rnd.Next(1, 3)).ToString()).Url&width=1200&constrain=false&crop=resize&compression=75" alt=""></div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12">
+                <span class="flow-text left-align">@Html.Raw(Umbraco.Field("bodyText"))</span>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    if (Umbraco.Content(OrganizationPersonsNodeId).Children().Where("Visible").Count() > 0)
+    {
+        <div class="container">
+            <div class="section">
+                @foreach (var Person in Umbraco.Content(OrganizationPersonsNodeId).Children().Where("Visible"))
+                {
+                    if (i % 3 == 1)
+                    {
+                        @:<div class="row">
+                    }
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center brown-text"><i class="material-icons">person_pin</i></h2>
+                            <h5 class="center">@Person.Name</h5>
+                            <p class="center">
+                                @Person.personTitle
+                            </p>
+                            <p class="light center">
+                                <b>Puhelin:</b> @Person.personPhone<br />
+                                <b>Vastuualue:</b> @Person.personAreaOfResponsibility
+                            </p>
+                        </div>
+                    </div>
+
+                    if (i / 3 == 1)
+                    {
+                       @:</div>
+                    }
+                    i++;
+                }
+
+            @if (((i - 1) / 3) == 0)
+            {
+                @:</div>
+            }
+        </div>
+    </div>
+    }
 }
