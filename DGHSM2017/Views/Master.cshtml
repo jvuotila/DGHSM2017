@@ -35,23 +35,24 @@
     <meta property="og:title" content="@home.Name" />
     <meta property="og:description" content="@if(Umbraco.Field("bodyText").ToString() != string.Empty) { @str1 } else { @str2 }" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="~/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(home, "logo").ToString()).Url&width=600&constrain=false&crop=resize&compression=90" />
+    <meta property="og:image" content="@Umbraco.TypedMedia(Umbraco.Field(home, "logo").ToString()).Url?width=600&constrain=fals&compression=90" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="@CurrentPage.Url" />
     <meta name="twitter:title" content="@home.Name" />
     <meta name="twitter:description" content="@if(Umbraco.Field("bodyText").ToString() != string.Empty) { @str1 } else { @str2 }" />
-    <meta name="twitter:image" content="~/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(home, "logo").ToString()).Url&width=600&constrain=false&crop=resize&compression=90" />
+    <meta name="twitter:image" content=@Umbraco.TypedMedia(Umbraco.Field(home, "logo").ToString()).Url?width=600&constrain=false&compression=90" />
     @*<meta name="twitter:site" content="" />*@
     <title>@home.Name | @CurrentPage.Name</title>
 
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="~/css/materialize.min.css" rel="stylesheet" media="screen,projection" type="text/css" />
-    <link href="~/css/styles.min.css" rel="stylesheet" media="screen,projection" type="text/css" />
+	<link href="/css/materialize.min.css" rel="stylesheet" media="screen,projection" type="text/css" />
+    <link href="/css/styles.min.css" rel="stylesheet" media="screen,projection" type="text/css" />
 </head>
 <body>
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="@home.Url" class="brand-logo"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(home, "navigationLogo").ToString()).Url&height=70&constrain=false&crop=resize&compression=90" alt="@home.Name" /></a>
+            <a id="logo-container" href="@home.Url" class="brand-logo"><img src="@Umbraco.TypedMedia(Umbraco.Field(home, "navigationLogo").ToString()).Url?height=70&constrain=false&compression=90" alt="@home.Name" /></a>
+            <a href="http://www.discgolfhyvinkaa.net/" target="_blank" class="right" style="margin: 10px 0;"><img src="@Umbraco.TypedMedia(Umbraco.Field(home, "organizerLogo").ToString()).Url?height=70&constrain=false&compression=90" alt="DiscGolf Hyvinkää" /></a>
             @{ Html.RenderPartial("MainNavigation"); }
         </div>
     </nav>
@@ -70,7 +71,7 @@
                             {
                                 var node = Umbraco.Content(partnerId);
 
-                                <a href="@node.partnerUrl" target="_blank"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(node, "partnerLogo").ToString()).Url&height=70&constrain=false&crop=resize&compression=90" alt="@node.partnerName" style="margin: 5px;" /></a>
+                                <a href="@node.partnerUrl" target="_blank"><img src="@Umbraco.TypedMedia(Umbraco.Field(node, "partnerLogo").ToString()).Url?height=70&constrain=false&compression=90" alt="@node.partnerName" style="margin: 5px;" /></a>
                             }
                         }
                     }

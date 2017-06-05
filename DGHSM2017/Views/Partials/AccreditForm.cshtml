@@ -1,0 +1,119 @@
+﻿@model DGHSM2017.Models.AccreditFormViewModel
+@*@using (Html.BeginUmbracoForm<DGHSM2017.Controllers.AccreditFormSurfaceController>("CreateAccreditMessage"))*@
+@using (Html.BeginUmbracoForm("CreateAccreditMessage", "AccreditFormSurface"))
+{
+    if (!ViewData.ModelState.IsValid)
+    {
+        <div class="row">
+            <div class="col s12 error">
+                @Html.ValidationSummary(true, "Lomake ei validi")
+            </div>
+        </div>
+    }
+
+    <fieldset>
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                @Html.TextBoxFor(x => x.FirstName, new Dictionary<string, Object>
+            { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.FirstName)
+                @Html.LabelFor(x => x.FirstName)
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                @Html.TextBoxFor(x => x.LastName, new Dictionary<string, Object>
+            { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.LastName)
+                @Html.LabelFor(x => x.LastName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">radio</i>
+                @Html.TextBoxFor(x => x.Media, new Dictionary<string, Object>
+            { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.Media)
+                @Html.LabelFor(x => x.Media)
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                @Html.TextBoxFor(x => x.EmailAddress, new Dictionary<string, Object>
+            { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.EmailAddress)
+                @Html.LabelFor(x => x.EmailAddress)
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                @Html.TextBoxFor(x => x.PhoneNumber, new Dictionary<string, Object>
+            { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.PhoneNumber)
+                @Html.LabelFor(x => x.PhoneNumber)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                Kalusto:
+                <span class="checkboxContainer">
+                    @Html.CheckBoxFor(x => x.Interview)
+                    @Html.LabelFor(x => x.Interview)
+                    @Html.ValidationMessageFor(x => x.Interview)
+                </span>
+                <span class="checkboxContainer">
+                    @Html.CheckBoxFor(x => x.Photography)
+                    @Html.LabelFor(x => x.Photography)
+                    @Html.ValidationMessageFor(x => x.Photography)
+                </span>
+                <span class="checkboxContainer">
+                    @Html.CheckBoxFor(x => x.Video)
+                    @Html.LabelFor(x => x.Video)
+                    @Html.ValidationMessageFor(x => x.Video)
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                Päivät:
+                <span class="checkboxContainer">
+                    @Html.CheckBoxFor(x => x.Day1)
+                    @Html.LabelFor(x => x.Day1)
+                    @Html.ValidationMessageFor(x => x.Day1)
+                </span>
+                <span class="checkboxContainer">
+                    @Html.CheckBoxFor(x => x.Day2)
+                    @Html.LabelFor(x => x.Day2)
+                    @Html.ValidationMessageFor(x => x.Day2)
+                </span>
+                <span class="checkboxContainer">
+                    @Html.CheckBoxFor(x => x.Day3)
+                    @Html.LabelFor(x => x.Day3)
+                    @Html.ValidationMessageFor(x => x.Day3)
+                </span>
+                <span class="checkboxContainer">
+                    @Html.CheckBoxFor(x => x.Day4)
+                    @Html.LabelFor(x => x.Day4)
+                    @Html.ValidationMessageFor(x => x.Day4)
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">question_answer</i>
+                @Html.TextBoxFor(x => x.checkCode, new Dictionary<string, Object>
+                { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.checkCode)
+                @Html.LabelFor(x => x.checkCode)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center">
+                @*<button type="submit" class="btn-large waves-effect waves-light light-green darken-2">Lähetä</button>*@
+                <input type="submit" class="btn-large waves-effect waves-light light-green darken-2" value="Lähetä" />
+            </div>
+        </div>
+    </fieldset>
+}

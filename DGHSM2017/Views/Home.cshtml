@@ -9,12 +9,12 @@
         <div class="container">
             <div class="row center">
                 <div class="logoContainer">
-                    <img src="/imagegen.ashx?image=@Umbraco.TypedMedia(@Umbraco.Field(CurrentPage, "logo").ToString()).Url&height=470&constrain=false&crop=resize&compression=90" alt="" class="logo">
+                    <img src="@Umbraco.TypedMedia(@Umbraco.Field(CurrentPage, "logo").ToString()).Url?height=470&constrain=false&compression=90" alt="" class="logo">
                 </div>
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(@Umbraco.Field(CurrentPage, "backgroundImage1").ToString()).Url&width=1200&constrain=false&crop=resize&compression=75" alt=""></div>
+    <div class="parallax"><img src="@Umbraco.TypedMedia(@Umbraco.Field(CurrentPage, "backgroundImage1").ToString()).Url?width=1200&constrain=false&compression=75" alt=""></div>
 </div>
 
 <div class="container">
@@ -42,12 +42,12 @@
                         @:<div class="row">
                     }
 
-                    <div class="col s12 m4 hoverable" onclick="location.href='@News.Url';" style="cursor: pointer;">
+                    <div class="col s12 m6 l4 hoverable" onclick="location.href='@News.Url';" style="cursor: pointer;">
                         <div class="icon-block">
                             <h2 class="center brown-text"><i class="material-icons">message</i></h2>
                             <h5 class="">@News.Name</h5>
-                            <p class="light">@News.UpdateDate.ToString("dd.MM.yyyy klo HH.mm")</p>
-                            <p class="light">@News.leadText</p>
+                            <p class="">@News.UpdateDate.ToString("dd.MM.yyyy klo HH.mm")</p>
+                            <p class="">@News.leadText</p>
                         </div>
                     </div>
 
@@ -61,7 +61,9 @@
                 {
                     @:</div>
                 }
-                    
+                <div class="row">
+                    <div class="col s12 m12 l12 center"><a href="@Umbraco.Content(CurrentPage.newsPage).Url" id="news-button" class="btn-large waves-effect waves-light light-green darken-2">Kaikki uutiset</a></div>
+                </div>
             </div>
         </div>
     }
@@ -70,11 +72,11 @@
     <div class="section no-pad-bot">
         <div class="container">
             <div class="row center">
-                <a href="@Umbraco.Content(CurrentPage.signupPage).Url" id="download-button" class="btn-large waves-effect waves-light light-green darken-2">Ilmoittautuminen</a>
+                <a href="@Umbraco.Content(CurrentPage.signupPage).Url" id="signup-button" class="btn-large waves-effect waves-light light-green darken-2">Ilmoittautuminen</a>
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(@Umbraco.Field(CurrentPage, "backgroundImage2").ToString()).Url&width=1200&constrain=false&crop=resize&compression=75" alt=""></div>
+    <div class="parallax"><img src="@Umbraco.TypedMedia(@Umbraco.Field(CurrentPage, "backgroundImage2").ToString()).Url?width=1200&constrain=false&compression=75" alt=""></div>
 </div>
 @*<div class="container">
     <div class="section">
@@ -135,5 +137,5 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(@Umbraco.Field(CurrentPage, "backgroundImage3").ToString()).Url&width=1200&constrain=false&crop=resize&compression=75" alt=""></div>
+    <div class="parallax"><img src="@Umbraco.TypedMedia(@Umbraco.Field(CurrentPage, "backgroundImage3").ToString()).Url?width=1200&constrain=false&compression=75" alt=""></div>
 </div>*@

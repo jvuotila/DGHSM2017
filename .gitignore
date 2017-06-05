@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/ftp
+/DGHSM2017/App_Data/
+/DGHSM2017/Media

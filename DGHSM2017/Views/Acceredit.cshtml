@@ -1,0 +1,36 @@
+﻿@using ClientDependency.Core.Mvc
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Master.cshtml";
+    var home = Umbraco.TypedContentAtRoot().First();
+    Random rnd = new Random();
+}
+
+<div class="parallax-container valign-wrapper" style="min-height: 300px;">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>@CurrentPage.Name</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="@Umbraco.TypedMedia(@Umbraco.Field(home, "backgroundImage" + rnd.Next(1, 3)).ToString()).Url?width=1200&constrain=false&compression=75" alt=""></div>
+</div>
+<div class="container">
+    <div class="section">
+        @if (ViewBag.Accredit != null) {
+        <div class="row center">
+            <div class="col s12 m12 l12">
+                <h4>Kiitos akkreditiointihakemuksestasi. Otamme teihin myöhemmin yhteyttä.</h4>
+            </div>
+        </div>
+        } else {
+        <div class="row">
+            <div class="col s12 m12 l12">
+                @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
+                @Html.Partial("AccreditForm", new DGHSM2017.Models.AccreditFormViewModel())
+            </div>
+        </div>
+        }
+    </div>
+</div>

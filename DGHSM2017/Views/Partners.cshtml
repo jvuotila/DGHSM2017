@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(@Umbraco.Field(home, "backgroundImage" + rnd.Next(1, 3)).ToString()).Url&width=1200&constrain=false&crop=resize&compression=75" alt=""></div>
+    <div class="parallax"><img src="@Umbraco.TypedMedia(@Umbraco.Field(home, "backgroundImage" + rnd.Next(1, 3)).ToString()).Url?width=1200&constrain=false&compression=75" alt=""></div>
 </div>
 <div class="container">
     <div class="section">
@@ -40,15 +40,15 @@
 
                     <div class="col s12 m6">
                         <div class="icon-block">
-                            <h4 class="center">@Partner.partnerName</h4>
-                            <p class="center"><a href="@Partner.partnerURL" target="_blank"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(Partner, "partnerLogo").ToString()).Url&height=70&constrain=false&crop=resize&compression=90" alt="@Partner.partnerName" /></a></p>
-                            <p class="light">
+                            <p class="center" style="margin-bottom: 30px;"><a href="@Partner.partnerURL" target="_blank"><img src="@Umbraco.TypedMedia(Umbraco.Field(Partner, "partnerLogo").ToString()).Url?height=70&constrain=false&compression=90" alt="@Partner.partnerName" /></a></p>
+                            <h5 class="center">@Partner.partnerName</h5>
+                            <p>
                                 @Html.Raw(Partner.partnerIntro)
-                            </p>
+                            </p>                            
                         </div>
                     </div>
 
-                    if (i / 2 == 1)
+                    if (i % 2 == 0)
                     {
                         @:</div>
                     }
